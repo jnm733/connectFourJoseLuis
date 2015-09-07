@@ -65,6 +65,7 @@ public class PlayingStandTest extends TestCase {
         } catch (GameOverException expected) {
         }
     }
+    
 
     public void testFourConnectedHorizontally() throws GameOverException {
         PlayingStand stand = new PlayingStand();

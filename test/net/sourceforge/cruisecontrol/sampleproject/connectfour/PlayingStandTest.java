@@ -237,6 +237,7 @@ public class PlayingStandTest extends TestCase {
 		
     }
 
+    
     public void testWinningPlacement() {
         PlayingStand stand = new PlayingStand();
         createRedWinsDiagonallyUpward(stand);

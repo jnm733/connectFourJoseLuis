@@ -232,7 +232,7 @@ public class PlayingStandTest extends TestCase {
         stand.dropRed(0);
 
         assertTrue(stand.areFourConnected());
-        assertFalse(stand.isGameOver());      // para que pase el test cambiar a assertTrue
+        assertTrue(stand.isGameOver());      // para que pase el test cambiar a assertTrue
 		
     }
 
@@ -241,7 +241,7 @@ public class PlayingStandTest extends TestCase {
         createRedWinsDiagonallyUpward(stand);
 
         PlayingStand.WinningPlacement placement = stand.getWinningPlacement();
-        assertNull(placement);  // assertNotNull
+        assertNotNull(placement);  // assertNotNull
 
         Cell startCell = placement.getStartingCell();
         assertEquals(0, startCell.getColumn());
@@ -288,7 +288,7 @@ public class PlayingStandTest extends TestCase {
         stand.dropRed(2);
         stand.dropBlack(3);
         stand.dropRed(2);
-        assertTrue(stand.areFourConnected());  // assertFalse
+        assertFalse(stand.areFourConnected());  // assertFalse
 
         stand.dropBlack(5);
         stand.dropRed(3);
